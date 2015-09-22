@@ -32,7 +32,7 @@ means
 
 # In the following code i will compare the sample variance and standard deviation
 # of three thousand simulations of 40 exponentials to the theoratical variance
-# and standard deviation
+# and standard deviation of the exponential distribution
 
 variance = var(simulation)
 stdev = sd(simulation)
