@@ -53,18 +53,18 @@ stdev
 # with the distribution of 4000 averages of 40 random exponentials
 
 require(ggplot2)
-require(grid)
+require(gridExtra)
 
 sim1 = rexp(4000,1/5)
 sim2 = replicate(4000,mean(rexp(40,1/5)))
 
-df1=data.frame(X=sim1)
-df2=data.frame(X=sim2)
+df1 = data.frame(X = sim1)
+df2 = data.frame(X = sim2)
 
-p1 = ggplot(df1, aes(x = X)) + geom_histogram(aes(y = ..density..),fill="red") + geom_density(size=1)
-p2 = ggplot(df2, aes(x = X)) + geom_histogram(aes(y = ..density..),fill="red") + geom_density(size=1)
+p1 = ggplot(df1, aes(x = X)) + geom_histogram(aes(y = ..density..), fill = "red") + geom_density(size = 1)
+p2 = ggplot(df2, aes(x = X)) + geom_histogram(aes(y = ..density..), fill = "red") + geom_vline(xintercept = 5, size = 2) + geom_density(size=1)
 
-multiplot(p1, p2, cols = 2)
+grid.arrange(p1, p2, ncol = 2)
 
 
 
