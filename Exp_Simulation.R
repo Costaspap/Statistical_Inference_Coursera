@@ -61,8 +61,8 @@ sim2 = replicate(4000,mean(rexp(40,1/5)))
 df1 = data.frame(X = sim1)
 df2 = data.frame(X = sim2)
 
-p1 = ggplot(df1, aes(x = X)) + geom_histogram(aes(y = ..density..), fill = "red") + geom_density(size = 1)
-p2 = ggplot(df2, aes(x = X)) + geom_histogram(aes(y = ..density..), fill = "red") + geom_vline(xintercept = 5, size = 2) + geom_density(size=1)
+p1 = ggplot(df1, aes(x = X)) + geom_histogram(aes(y = ..density..), fill = "red") + geom_density(size = 1,adjust=3)
+p2 = ggplot(df2, aes(x = X)) + geom_histogram(aes(y = ..density..), fill = "red") + geom_vline(xintercept = 5, size = 2) + geom_density(size=1,adjust=2)
 
 grid.arrange(p1, p2, ncol = 2)
 
