@@ -19,12 +19,14 @@ means = mean(simulation)
 
 means
 
-hist(simulation, col="red")
+hist(simulation, col="red", main = "Theoretical vs Sample Mean")
 abline(v=means,col="blue",lwd=4,lty=4)
 abline(v=5,col="black",lwd=4,lty=5)
 legend("topright",c("Theoretical mean","Sample mean"),lty=c(5,4),lwd=c(4,4),col = c("black","blue"))
 
-#The sampling mean is approximately 5 (4.983771 in my case)
+# The sample mean is approximately 5 (4.983771 in my case). In the plot
+# presented above we can see that the difference between the theoretical (Black line)
+# and the sample (Blue line) mean is barely visible.
 
 #===========================================================================
 
@@ -45,7 +47,7 @@ stdev = sd(simulation)
 variance
 stdev
 
-# The sampling variance and standard deviation
+# The sample variance and standard deviation
 # are approximately equal to the theoretical variance and standard deviation
 # (0.6149436 and 0.7841834 respectively in my case)
 
@@ -54,7 +56,7 @@ stdev
 
 # 3. Show that the distribution is approximately normal.
 
-# Here we are going to compare the distribution of 4000 random exponentials
+# Here I am going to compare the distribution of 4000 random exponentials
 # with the distribution of 4000 averages of 40 random exponentials
 
 require(ggplot2)
