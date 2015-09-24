@@ -19,6 +19,11 @@ means = mean(simulation)
 
 means
 
+hist(simulation, col="red")
+abline(v=means,col="blue",lwd=4,lty=4)
+abline(v=5,col="black",lwd=4,lty=5)
+legend("topright",c("Theoretical mean","Sample mean"),lty=c(5,4),lwd=c(4,4),col = c("black","blue"))
+
 #The sampling mean is approximately 5 (4.983771 in my case)
 
 #===========================================================================
