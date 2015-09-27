@@ -22,7 +22,7 @@ means
 hist(simulation, col="red", main = "Theoretical vs Sample Mean")
 abline(v=means,col="blue",lwd=4,lty=4)
 abline(v=5,col="black",lwd=4,lty=5)
-legend("topright",c("Theoretical mean","Sample mean"),lty=c(5,4),lwd=c(4,4),col = c("black","blue"))
+legend("topright",c("Theoretical mean","Sample mean"),lty=c(5,4),lwd=c(4,4),col = c("black","blue"),cex = 0.75)
 
 # The sample mean is approximately 5 (4.983771 in my case). In the plot
 # presented above we can see that the difference between the theoretical (Black line)
@@ -73,7 +73,9 @@ p2 = ggplot(df2, aes(x = X)) + geom_histogram(aes(y = ..density..), fill = "red"
 
 grid.arrange(p1, p2, ncol = 2)
 
-
+# In the second plot we can see that the distribution
+# of 4000 averages of 40 random exponentials looks approximaterly
+# normal.
 
 
 
